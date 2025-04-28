@@ -10,11 +10,13 @@ function setup() {
 
   // 建立與視訊畫面相同大小的 Graphics
   overlayGraphics = createGraphics(capture.width, capture.height);
-  drawOverlayGraphics();
 }
 
 function draw() {
   background('#5CADAD');
+
+  // 更新 overlayGraphics 的內容
+  drawOverlayGraphics();
 
   // 顯示攝影機畫面
   translate(width, 0); // 移動畫布的原點到右上角
@@ -35,7 +37,6 @@ function windowResized() {
 
   // 更新 overlayGraphics 的大小
   overlayGraphics = createGraphics(capture.width, capture.height);
-  drawOverlayGraphics();
 }
 
 function drawOverlayGraphics() {
