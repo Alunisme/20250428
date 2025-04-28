@@ -10,6 +10,8 @@ function setup() {
 
 function draw() {
   background('#5CADAD');
+  translate(width, 0); // 移動畫布的原點到右上角
+  scale(-1, 1); // 水平翻轉畫布
   image(capture, (width - capture.width) / 2, (height - capture.height) / 2);
 }
 
