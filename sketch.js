@@ -10,6 +10,7 @@ function setup() {
 
   // 建立與視訊畫面相同大小的 Graphics
   overlayGraphics = createGraphics(capture.width, capture.height);
+  overlayGraphics.fill(255, 0, 0, 150); // 半透明紅色
   overlayGraphics.noStroke();
   overlayGraphics.ellipse(overlayGraphics.width / 2, overlayGraphics.height / 2, 100, 100); // 畫一個圓
 }
@@ -36,6 +37,7 @@ function windowResized() {
 
   // 更新 overlayGraphics 的大小
   overlayGraphics = createGraphics(capture.width, capture.height);
+  overlayGraphics.fill(255, 0, 0, 150); // 半透明紅色
   overlayGraphics.noStroke();
   overlayGraphics.ellipse(overlayGraphics.width / 2, overlayGraphics.height / 2, 100, 100); // 畫一個圓
 }
